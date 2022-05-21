@@ -1,0 +1,94 @@
+/* Box Model Hack */
+* {
+     box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+html {
+     font-size: 62.5%;
+     box-sizing: border-box;
+}
+
+*, *::before, *::after {
+     margin: 0;
+     padding: 0;
+     box-sizing: inherit;
+}
+
+body {
+     background: linear-gradient(180deg, rgba(210,118,174,1) 0%, rgba(255,213,185,0.9920343137254902) 0%, rgba(255,155,209,1) 100%) fixed;
+}
+
+.calculator {
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     width: 400px;
+     padding: 40px;
+     padding-top: 75px;
+     font-family: Helvetica, sans-serif;
+     background: linear-gradient(0deg, rgba(210,118,174,1) 0%, rgba(255,213,185,0.9920343137254902) 0%, rgba(255,155,209,1) 100%);
+     border-radius: 25px;
+}
+
+.calculator-screen {
+     width: 100%;
+     font-size: 5rem;
+     height: 80px;
+     border: none;
+     background: rgba(255, 255, 255, 0.642);
+     color: rgba(93, 41, 69, 0.791);
+     text-align: right;
+     padding-right: 10px;
+}
+
+.calculator-buttons {
+     display: flex;
+     flex-direction: row;
+     flex-wrap: wrap;
+     padding: 15px;
+     padding-bottom: 5px;
+}
+
+button {
+     height: 60px;
+     background: rgba(255, 255, 255, 0.642);
+     border: none;
+     border-radius: 30px;
+     font-size: 4rem;
+     font-weight: bold;
+     color: rgba(93, 41, 69, 0.791);
+     margin: 7px;
+     padding: 5px;
+     flex: 1 0 18%;
+}
+
+.all-clear {
+     background: rgba(194, 107, 154, 0.642);
+     color: white;
+     font-size: 3rem;
+}
+
+button:hover {
+     background: rgba(215, 141, 186, 0.642);
+}
